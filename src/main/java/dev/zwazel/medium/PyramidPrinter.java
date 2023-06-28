@@ -10,8 +10,17 @@ import java.util.Scanner;
   * * *
  */
 public class PyramidPrinter {
-    public static String pyramidString(int baseWidth){
-        //TODO generate pyramid here
-        return "";
+    public static int pyramidString(int baseWidth){
+
+        for (int i = 0; i <= baseWidth; i++) {
+
+            for (int k = 1; k <= i; k++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        return 0;
     }
 }

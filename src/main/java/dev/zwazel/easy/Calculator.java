@@ -5,20 +5,31 @@ package dev.zwazel.easy;
  */
 public class Calculator {
     public static float calculate(char operator, float number1, float number2) {
+
+        float sum = 0;
+
         switch (operator) {
             case '+':
-                //TODO add
+                sum = number1 + number2;
                 break;
             case '-':
-                //TODO subtract
+                sum = number1 - number2;
                 break;
             case '/':
-                //TODO divide
+                if(number1 == 0 || number2 == 0) {
+                    System.out.println("Cannot divide with 0");
+                    throw new ArithmeticException();
+                }
+                else {
+                    sum = number1 / number2;
+                }
                 break;
             case '*':
-                //TODO multiply
+                sum = number1 * number2;
                 break;
         }
-        return 0; //default case for unknown operator
+     throw new IllegalArgumentException();
+
     }
+
 }
